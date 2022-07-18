@@ -1,0 +1,10 @@
+.Card{
+    background-color: white;
+    margin: 10px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.Title{
+    color: black;
+}
