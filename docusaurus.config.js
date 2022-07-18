@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Staticwevdev Dashboard',
-  url: 'https://HannahZhuSWE.github.io/docusaurus-dashboard',
+  url: 'https://HannahZhuSWE.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
