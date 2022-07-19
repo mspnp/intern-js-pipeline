@@ -5,15 +5,15 @@ import classes from "./RepoCard.module.css"
 const RepoCard = (props) =>{
 
   const badgeLink  = () =>{
-    return "https://github.com/staticwebdev/".concat(props.repoName).concat("/actions/workflows/playwright.yml/badge.svg");
+    return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright.yml/badge.svg";
   }
 
   const githubActionsLink = () => {
-    return "https://github.com/staticwebdev/".concat(props.repoName).concat("/actions/workflows/playwright.yml");
+    return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright.yml";
   }
   
   const githubLink = () => {
-    return "https://github.com/staticwebdev/".concat(props.repoName);
+    return "https://github.com/"+props.orgName+"/"+props.repoName;
   }
 
     return (
