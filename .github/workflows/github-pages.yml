@@ -25,7 +25,4 @@ jobs:
     - name: Rebuild github page
       run: npm run build
     - name: Deploy webpage
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages
-        folder: public
+      run: npm run deploy
