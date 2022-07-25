@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'; 
 import RepoCard from './RepoCard.jsx';
 import Title from './Title';
-import Backdrop from './Backdrop';
 import { getRepos } from '../getData.js';
 export function HomePage() {
 
