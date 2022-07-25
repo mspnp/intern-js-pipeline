@@ -6,7 +6,7 @@ export const getRepos = async(org) => {
     console.log(link);
     const results = await axios.get(link,{
         headers: {
-            Authorization: process.GITHUB_TOKEN,
+            
           }}
     );
     const arrayNames = results.data.map(element => {
