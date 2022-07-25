@@ -1,7 +1,6 @@
 import React from "react";
-import MDXComponents from '@theme-original/MDXComponents';
-import StatusBadge from './StatusBadge.mdx'
-import classes from "./RepoCard.module.css"
+import classes from "./RepoCard.module.css";
+
 const RepoCard = (props) =>{
 
   const badgeLink  = () =>{
