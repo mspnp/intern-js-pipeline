@@ -7,15 +7,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Staticwevdev Dashboard',
-  url: 'https://HannahZhuSWE.github.io/',
-  baseUrl: '/docusaurus-dashboard/',
+  url: 'https://miniature-fortnight-8ff422f4.pages.github.io/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'HannahZhuSWE', // Usually your GitHub org/user name.
+  organizationName: 'mspnp', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   // Even if you don't use internalization, you can use this field to set useful
