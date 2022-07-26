@@ -1,9 +1,7 @@
 import axios from "axios";
 
 export const getRepos = async(org) => {
-    console.log("here");
     const link = "https://api.github.com/orgs/"+org+"/repos";
-    console.log(link);
     const results = await axios.get(link,{
         headers: {
             
@@ -15,3 +13,7 @@ export const getRepos = async(org) => {
     console.log(arrayNames);
     return arrayNames;
  };
+
+ export const getWeekReport = async(jobId) =>{
+    return [true, true, true, false, true, false, false]
+ }

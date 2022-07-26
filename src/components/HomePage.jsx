@@ -21,7 +21,6 @@ export function HomePage() {
 
   return (
     <div >
-        <Backdrop/>
         <Title/>
         <RepoCard repoName='gatsby-test-testharness' orgName= 'HannahZhuSWE'/>
         {repos.map(element => {

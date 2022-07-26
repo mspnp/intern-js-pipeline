@@ -1,4 +1,6 @@
 import React from "react";
+import OnDemandPane from "./OnDemandPane";
+import ScheduledPane from "./ScheduledPane";
 import classes from "./RepoCard.module.css";
 
 const RepoCard = (props) =>{
@@ -23,9 +25,12 @@ const RepoCard = (props) =>{
             </h3>
           </a>
             
-            <a href={githubActionsLink()}>
-              <img src={badgeLink()}/>
-            </a>
+          <div className={classes.Panes}>
+            <OnDemandPane orgName={props.orgName} repoName={props.repoName}/>
+            <ScheduledPane orgName={props.orgName} repoName={props.repoName}/>
+          </div>
+          
+          
             
         </div>
     );

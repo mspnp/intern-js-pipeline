@@ -1,0 +1,15 @@
+.RedBox{
+    background-color:crimson;
+    display:inline-block;
+    width:30px;
+    height:30px;
+    margin-right: 10px;
+}
+
+.GreenBox{
+    background-color:lightgreen;
+    display:inline-block;
+    width:30px;
+    height:30px;
+    margin-right: 10px;
+}
