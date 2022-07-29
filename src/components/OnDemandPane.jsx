@@ -12,14 +12,14 @@ const OnDemandPane = (props) =>{
     }
 
       return (
-          <div className={classes.Pane} >
+          <div className={classes.Pane}>
             <h4>
-                Last Run
+                Latest Run
             </h4>
-            <a href={githubActionsLink()}>
-                <img src={badgeLink()}/>
-            </a>
-          </div>
+          <a href={githubActionsLink()}>
+          <img src={badgeLink()}/>
+        </a>
+        </div>
       );
   }
   

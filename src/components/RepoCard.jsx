@@ -4,14 +4,6 @@ import ScheduledPane from "./ScheduledPane";
 import classes from "./RepoCard.module.css";
 
 const RepoCard = (props) =>{
-
-  const badgeLink  = () =>{
-    return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright.yml/badge.svg";
-  }
-
-  const githubActionsLink = () => {
-    return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright.yml";
-  }
   
   const githubLink = () => {
     return "https://github.com/"+props.orgName+"/"+props.repoName;

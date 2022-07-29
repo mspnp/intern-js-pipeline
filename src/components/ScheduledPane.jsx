@@ -19,10 +19,20 @@ const ScheduledPane = (props) =>{
       fetchResults();
     }, []);
 
+    const badgeLink  = () =>{
+        return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-scheduled.yml/badge.svg";
+    }
+    
+    const githubActionsLink = () => {
+        return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-scheduled.yml";
+    }
+
       return (
           <div className={classes.Pane}>
             <h4>
-                Weekly View
+                <a href={githubActionsLink()}>
+                    Nightly Tests
+                </a>
             </h4>
             <span>
                 {
@@ -30,6 +40,7 @@ const ScheduledPane = (props) =>{
                         return <TestResultBox pass={result} orgName={props.orgName} repoName={props.repoName}/>
                     })
                 }
+                
             </span>
             
           </div>
