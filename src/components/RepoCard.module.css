@@ -8,3 +8,7 @@
 .Title{
     color: black;
 }
+
+.Panes{
+    overflow: auto;
+}

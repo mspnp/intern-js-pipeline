@@ -13,3 +13,7 @@ export const getRepos = async(org) => {
     console.log(arrayNames);
     return arrayNames;
  };
+
+ export const getWeekReport = async(jobId) =>{
+    return [true, true, true, false, true, false, false]
+ }

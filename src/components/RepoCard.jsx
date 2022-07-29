@@ -1,15 +1,9 @@
 import React from "react";
+import OnDemandPane from "./OnDemandPane";
+import ScheduledPane from "./ScheduledPane";
 import classes from "./RepoCard.module.css";
 
 const RepoCard = (props) =>{
-
-  const badgeLink  = () =>{
-    return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright.yml/badge.svg";
-  }
-
-  const githubActionsLink = () => {
-    return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright.yml";
-  }
   
   const githubLink = () => {
     return "https://github.com/"+props.orgName+"/"+props.repoName;
@@ -23,9 +17,12 @@ const RepoCard = (props) =>{
             </h3>
           </a>
             
-            <a href={githubActionsLink()}>
-              <img src={badgeLink()}/>
-            </a>
+          <div className={classes.Panes}>
+            <OnDemandPane orgName={props.orgName} repoName={props.repoName}/>
+            <ScheduledPane orgName={props.orgName} repoName={props.repoName}/>
+          </div>
+          
+          
             
         </div>
     );
