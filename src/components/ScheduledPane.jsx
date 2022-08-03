@@ -5,17 +5,30 @@ import { getWeekReport } from "../getData";
 const ScheduledPane = (props) =>{
 
     const [results, setResults] = useState([]);
+    const [date, setDate] = useState([]);
+
+    const formattedDate = (year, month, day) =>{
+      return (year+'-'+(month < 10 ? '0' : '') + month+'-'+ (day < 10 ? '0' : '') + day);
+    }
 
     useEffect(() => {
-      async function fetchResults() {
+      let startDate = new Date();
+      let dateArray = []
+      for(let x =0; x< 7; x++){
+        let todayFormatted = formattedDate(startDate.getFullYear(), startDate.getMonth()+1, startDate.getDate())
+        dateArray  = [...dateArray, todayFormatted]
+        startDate.setDate(startDate.getDate()-1);
+      }
+      setDate(dateArray);
+      async function fetchResults() {  
         try {
-          const asyncResponse = await getWeekReport('staticwebdev');
+          const asyncResponse = await getWeekReport(props.orgName, props.repoName);
           setResults(asyncResponse);
         } catch (err) {
           console.error(err);
         }
       }
-  
+      
       fetchResults();
     }, []);
 
@@ -36,8 +49,8 @@ const ScheduledPane = (props) =>{
             </h4>
             <span>
                 {
-                    results.map(result =>{
-                        return <TestResultBox pass={result} orgName={props.orgName} repoName={props.repoName}/>
+                    results.map((result, index) =>{
+                        return <TestResultBox date={date[6-index]} pass={result} orgName={props.orgName} repoName={props.repoName}/>
                     })
                 }
                 

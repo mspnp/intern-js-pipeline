@@ -11,12 +11,16 @@ const OnDemandPane = (props) =>{
       return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright.yml";
     }
 
+    const reportLink = () =>{
+      return "https://"+ "miniature-fortnight-8ff422f4" +".pages.github.io/test-reports/" + props.orgName + "/" + props.repoName + "/onDemand"
+    }
+
       return (
           <div className={classes.Pane}>
             <h4>
                 Latest Run
             </h4>
-          <a href={githubActionsLink()}>
+          <a href={reportLink()}>
           <img src={badgeLink()}/>
         </a>
         </div>
