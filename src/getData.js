@@ -11,6 +11,7 @@ export const getRepos = async(org) => {
         return element.name;
     });
     console.log(arrayNames);
+    arrayNames.sort();
     return arrayNames;
  };
 
