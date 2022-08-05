@@ -5,13 +5,12 @@ import classes from "./RepoCard.module.css";
 
 const RepoCard = (props) =>{
   
-  const githubLink = () => {
-    return "https://github.com/"+props.orgName+"/"+props.repoName;
-  }
+  const githubLink ="https://github.com/"+props.orgName+"/"+props.repoName;
+  
 
     return (
         <div className={classes.Card}>
-          <a href={githubLink()}>
+          <a href={githubLink}>
             <h3 className={classes.Title}>
                 {props.repoName}
             </h3>
