@@ -19,11 +19,19 @@ const ScheduledPane = (props) =>{
         dateArray  = [...dateArray, todayFormatted]
         startDate.setDate(startDate.getDate()-1);
       }
-      setDate(dateArray);
+      if([...dateArray] != [...date]){
+        setDate(dateArray);
+      }
+      
       async function fetchResults() {  
         try {
           const asyncResponse = await getWeekReport(props.orgName, props.repoName);
-          setResults(asyncResponse);
+          console.log(asyncResponse)
+          if([...asyncResponse] != [...results]){
+            setResults(asyncResponse);
+          }
+          
+          
         } catch (err) {
           console.error(err);
         }
@@ -32,18 +40,16 @@ const ScheduledPane = (props) =>{
       fetchResults();
     }, []);
 
-    const badgeLink  = () =>{
-        return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-scheduled.yml/badge.svg";
-    }
+    const badgeLink= "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-scheduled.yml/badge.svg";
     
-    const githubActionsLink = () => {
-        return "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-scheduled.yml";
-    }
+    
+    const githubActionsLink = "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-scheduled.yml";
+    
 
       return (
           <div className={classes.Pane}>
             <h4>
-                <a href={githubActionsLink()}>
+                <a href={githubActionsLink}>
                     Nightly Tests
                 </a>
             </h4>

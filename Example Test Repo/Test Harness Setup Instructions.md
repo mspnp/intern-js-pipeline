@@ -8,4 +8,3 @@ See [example repo](https://github.com/HannahZhuSWE/gatsby-test-testharness/blob/
 3. Copy the contents of `./github/workflows/test-only.yml` from the sample repo to the `./github/workflows/playwright.yml` file of your repo
 4. Add the script `"test": "playwright test"` to the `package.json` file (as seen in the example repo) 
 5. Write test suites and place them in your test folder.
-6. 
