@@ -5,10 +5,12 @@ const Title = () =>{
     return (
         <div>
             <h1 className={classes.Title}>
-                Staticwebdev Dashboard
+                Nightly Integration Tests Dashboard
             </h1>
             <p className={classes.Intro}>
-                The right side of each repo card displays the most recent test status and the left side displays the status of the nightly tests from the past week.
+                <b>For each repo card:</b>
+                The left side (<i>Latest Run</i>) displays the test status for the most recent run (caused by commits, pull requests or manual dispatch).
+                The right side (<i>Nightly Tests</i>) displays status of nightly integration tests for the past week (7 day history).
             </p>
         </div>
     );
