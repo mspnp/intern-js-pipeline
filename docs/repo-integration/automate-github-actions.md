@@ -4,31 +4,43 @@ sidebar_position: 3
 
 # Automate Github Actions
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+Following the instructions below to set up Github Actions to automatically run Playwright tests nightly and on pushes and pull requests to the Github repo. 
 
-## Create your first Post
+1. Copy the following contents to the `./github/workflows/playwright.yml` file of your repo. Note that if your repo requires other dependencies you may be required to install them after the step where you install Playwright.
 
-Create a file at `blog/2021-02-28-greetings.md`:
+```yaml
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-```md title="blog/2021-02-28-greetings.md"
----
-slug: greetings
-title: Greetings!
-authors:
-  - name: Joel Marcey
-    title: Co-creator of Docusaurus 1
-    url: https://github.com/JoelMarcey
-    image_url: https://github.com/JoelMarcey.png
-  - name: Sébastien Lorber
-    title: Docusaurus maintainer
-    url: https://sebastienlorber.com
-    image_url: https://github.com/slorber.png
-tags: [greetings]
----
+name: Playwright tests
 
-Congratulations, you have made your first post!
+on:
+  # Runs on push or pull requests and nightly
+  push:
+  pull_request:
+  schedule: 
+    # nightly
+    - cron: '0 0 * * *'
 
-Feel free to play around and edit this post as much you like.
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright
+      run: npx playwright install --with-deps
+    - name: Build production build
+      run: npm run build
+    - name: Run your tests
+      run: npm run test
+
 ```
-
-A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).

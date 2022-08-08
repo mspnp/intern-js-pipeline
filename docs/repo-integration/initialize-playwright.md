@@ -4,40 +4,11 @@ sidebar_position: 1
 
 # Initialize Playwright
 
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+Following the steps below to setup Playwright tests for your repo:
 
-- `src/pages/index.js` → `localhost:3000/`
-- `src/pages/foo.md` → `localhost:3000/foo`
-- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
-
-## Create your first React Page
-
-Create a file at `src/pages/my-react-page.js`:
-
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
-
-export default function MyReactPage() {
-  return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
-    </Layout>
-  );
-}
-```
-
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
-
-## Create your first Markdown Page
-
-Create a file at `src/pages/my-markdown-page.md`:
-
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
-
-This is a Markdown page
-```
-
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).
+1. At the root of your repository run `npm init playwright@latest` 
+    1. Select a language (`TypeScript` was used for the example repo but either will work)
+    2. Select a folder to place your tests in (the folder `tests` was used for the example repo)
+    3. Type `y` to add a github workflow
+2. Inside `package.json` add the script `"test": "playwright test"`
+3. Write test suites and place them in your test folder.
