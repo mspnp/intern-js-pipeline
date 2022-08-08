@@ -4,52 +4,14 @@ sidebar_position: 2
 
 # Setup Playwright Trace and Report
 
-Documents are **groups of pages** connected through:
+To setup tracing and reports for your Playwright tests follow the steps below:
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+1. In the `playwright.ts.config` file add the following configurations 
 
-## Create your first Doc
-
-Create a Markdown file at `docs/hello.md`:
-
-```md title="docs/hello.md"
-# Hello
-
-This is my **first Docusaurus document**!
+```json
+reporter: 
+    [ ['html', { outputFolder: 'pw-report' }], 
+      ['json', { outputFolder: 'pw-report', outputFile: 'report.json' }]
+    ],
 ```
-
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
-
-## Configure the Sidebar
-
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
-
-Add metadata to customize the sidebar label and position:
-
-```md title="docs/hello.md" {1-4}
----
-sidebar_label: 'Hi!'
-sidebar_position: 3
----
-
-# Hello
-
-This is my **first Docusaurus document**!
-```
-
-It is also possible to create your sidebar explicitly in `sidebars.js`:
-
-```js title="sidebars.js"
-module.exports = {
-  tutorialSidebar: [
-    {
-      type: 'category',
-      label: 'Tutorial',
-      // highlight-next-line
-      items: ['hello'],
-    },
-  ],
-};
-```
+2. Inside the `use` configuration, switch the value for the `trace` configuration from `on-first-retry` to `on`.
