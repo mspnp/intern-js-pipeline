@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Automate Github Actions
 
-Following the instructions below to set up Github Actions to automatically run Playwright tests nightly and on pushes and pull requests to the Github repo. 
+Set up Github Actions to automatically run Playwright tests nightly and on pushes and pull requests to the Github repo:
 
 1. Copy the following contents to the `./github/workflows/playwright.yml` file of your repo. Note that if your repo requires other dependencies you may be required to install them after the step where you install Playwright.
 

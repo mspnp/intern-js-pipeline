@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Setup Playwright Trace and Report
 
-To setup tracing and reports for your Playwright tests follow the steps below:
+Set up tracing and reports for your Playwright tests:
 
 1. In the `playwright.ts.config` file add the following configurations 
 

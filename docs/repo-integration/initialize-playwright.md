@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Initialize Playwright
 
-Following the steps below to setup Playwright tests for your repo:
+Set up Playwright tests for your repo:
 
 1. At the root of your repository run `npm init playwright@latest` 
     1. Select a language (`TypeScript` was used for the example repo but either will work)
