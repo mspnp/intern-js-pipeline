@@ -10,14 +10,16 @@ export function HomePage() {
     async function fetchRepos() {
       try {
         const asyncResponse = await getRepos('staticwebdev');
-        setRepos(asyncResponse);
+        if([...asyncResponse] != [...repos]){
+          console.log("still changing repos" + asyncResponse + " " + repos)
+          setRepos(asyncResponse);
+        }
       } catch (err) {
         console.error(err);
       }
     }
-    setRepos(['vanilla-basic', 'vanilla-api', 'nextjs-starter', 'nuxtjs-starter', 'angular-basic', 'react-basic', 'vue-basic', 'blazor-starter', 'blazor-basic', 'roles-function', '30DaysOfSWA' ])
-    //fetchRepos();
-  });
+    fetchRepos();
+  }, []);
 
   return (
     <div >
@@ -25,10 +27,10 @@ export function HomePage() {
         <RepoCard repoName='gatsby-test-testharness' orgName= 'HannahZhuSWE'/>
         { repos.map(element => {
 
-          //if(partOfDashboard("staticwebdev",element))
-          //{
+          if(partOfDashboard("staticwebdev",element))
+          {
             return <RepoCard repoName={element} orgName="staticwebdev"/>
-          //}
+          }
 
         })} 
       
