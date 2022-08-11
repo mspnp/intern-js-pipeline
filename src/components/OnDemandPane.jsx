@@ -6,7 +6,7 @@ const OnDemandPane = (props) =>{
     const badgeLink  = "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-onDemand.yml/badge.svg";
     
   
-    const githubActionsLink ="https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright.yml";
+    const githubActionsLink ="https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-onDemand.yml";
     
 
     const reportLink = "https://"+ "miniature-fortnight-8ff422f4" +".pages.github.io/test-reports/" + props.orgName + "/" + props.repoName + "/onDemand"

@@ -3,7 +3,7 @@ export const getRepos = async(org) => {
     const link = "https://api.github.com/orgs/"+org+"/repos";
     const results = await axios.get(link,{
         headers: {
-            Authorization: "Bearer "
+           // Authorization: "Bearer "
           }}
     );
     const arrayNames = results.data.map(element => {
@@ -24,7 +24,7 @@ export const getRepos = async(org) => {
     
     const workflows_results = await axios.get(workflows,{
         headers: {
-           Authorization: "Bearer "
+          // Authorization: "Bearer "
         }}
     );
     
@@ -55,32 +55,27 @@ export const getRepos = async(org) => {
 
  export const getWeekReport = async(org, repo) =>{
     const link = "https://api.github.com/repos/"+org+"/" +repo + "/actions/workflows/playwright-scheduled.yml/runs";
-    // const results = await axios.get(link,{
-    //     headers: {
-    //         Authorization: "Bearer "
-    //     }}
-    // );
-    // console.log(results);
-    // if(results.status == 404){
-    //     return ["null", "null", "null", "null", "null", "null", "null" ]
-    // }
-    // let status = []
-    // for(let x =0 ; x < 7; x++){
-    //     if(results.data.total_count > (6-x)){
-    //         status = [...status, results.data.workflow_runs[6-x].conclusion]
-    //     }
-    //     else{
-    //         status = [...status, "null"]
-    //     }
-    // }
-    //console.log(status)
-    if(repo == "gatsby-test-testharness")
-    {
-        return ["null", "null", "null", "success", "success", "success", "success" ]
-    }
-    else{
+    const results = await axios.get(link,{
+        headers: {
+           // Authorization: "Bearer "
+        }}
+    );
+    console.log(results);
+    if(results.status == 404){
+        console.log("hit a 404")
         return ["null", "null", "null", "null", "null", "null", "null" ]
     }
-    //return status;
+    let status = []
+    for(let x =0 ; x < 7; x++){
+        if(results.data.total_count > (6-x)){
+            status = [...status, results.data.workflow_runs[6-x].conclusion]
+        }
+        else{
+            status = [...status, "null"]
+        }
+    }
+    console.log(status)
+
+    return status;
  }
 
