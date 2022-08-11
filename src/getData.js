@@ -62,6 +62,7 @@ export const getRepos = async(org) => {
     );
     console.log(results);
     if(results.status == 404){
+        console.log("hit a 404")
         return ["null", "null", "null", "null", "null", "null", "null" ]
     }
     let status = []
@@ -74,13 +75,7 @@ export const getRepos = async(org) => {
         }
     }
     console.log(status)
-    // if(repo == "gatsby-test-testharness")
-    // {
-    //     return ["null", "null", "null", "success", "success", "success", "success" ]
-    // }
-    // else{
-    //     return ["null", "null", "null", "null", "null", "null", "null" ]
-    // }
+
     return status;
  }
 

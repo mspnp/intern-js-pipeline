@@ -18,7 +18,11 @@ export function HomePage() {
         console.error(err);
       }
     }
-    fetchRepos();
+    if([...repos] !=['vanilla-basic', 'vanilla-api', 'nextjs-starter', 'nuxtjs-starter', 'angular-basic', 'react-basic', 'vue-basic', 'blazor-starter', 'blazor-basic', 'roles-function', '30DaysOfSWA' ] ){
+      setRepos(['vanilla-basic', 'vanilla-api', 'nextjs-starter', 'nuxtjs-starter', 'angular-basic', 'react-basic', 'vue-basic', 'blazor-starter', 'blazor-basic', 'roles-function', '30DaysOfSWA' ])
+    }
+    
+    //fetchRepos();
   }, []);
 
   return (
