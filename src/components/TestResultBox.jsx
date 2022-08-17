@@ -21,9 +21,9 @@ const TestResultBox = (props) =>{
     }
 
 
-      return (
-        box()
-      );
+    return (
+      box()
+    );
   }
   
   export default TestResultBox;

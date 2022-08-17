@@ -14,4 +14,4 @@ reporter:
       ['json', { outputFolder: 'pw-report', outputFile: 'report.json' }]
     ],
 ```
-2. Inside the `use` configuration, switch the value for the `trace` configuration from `on-first-retry` to `on`.
+2. Inside the `use` configuration, switch the value for the `trace` configuration from `on-first-retry` to `on`

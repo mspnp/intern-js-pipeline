@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Nightly Integration Tests Dashboard',
-  url: 'https://miniature-fortnight-8ff422f4.pages.github.io/',
+  url: 'https://mspnp.github.io/intern-js-pipeline/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
