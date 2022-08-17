@@ -11,4 +11,4 @@ Set up Playwright tests for your repo:
     2. Select a folder to place your tests in (the folder `tests` was used for the example repo)
     3. Type `y` to add a github workflow
 2. Inside `package.json` add the script `"test": "playwright test"`
-3. Write test suites and place them in your test folder.
+3. Write test suites and place them in your test folder

@@ -1,53 +1,15 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Deploy website to Github pages
 
-Docusaurus can manage multiple versions of your docs.
+Activate repository settings to host dashboard on Github pages:
 
-## Create a docs version
-
-Release a version 1.0 of your project:
-
-```bash
-npm run docusaurus docs:version 1.0
-```
-
-The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.
-
-Your docs now have 2 versions:
-
-- `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs
-- `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**
-
-## Add a Version Dropdown
-
-To navigate seamlessly across versions, add a version dropdown.
-
-Modify the `docusaurus.config.js` file:
-
-```js title="docusaurus.config.js"
-module.exports = {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'docsVersionDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
-
-The docs version dropdown appears in your navbar:
-
-## Update an existing version
-
-It is possible to edit versioned docs in their respective folder:
-
-- `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
-- `docs/hello.md` updates `http://localhost:3000/docs/next/hello`
+1. Save all changes and push to main, this should trigger the github-pages workflow which will create a gh-pages branch for your Github repository
+2. On your Github repository's `Settings` page, under `code and automation`, select the `Pages` tab
+   1. Select `Deploy from a branch` as the source
+   2. Select `gh-pages` as the branch
+   3. Select `/(root)` as the root folder
+   4. Click the save button
+3. Your site will take a few minutes to deploy. After it does click on the site link provided on the `Pages` tab to view your dashboard

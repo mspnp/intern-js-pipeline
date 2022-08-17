@@ -3,6 +3,6 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "How to setthe dashboard to display test results for all repos."
+    "description": "How to set up the dashboard on Github pages to display test results for all repos."
   }
 }

@@ -20,20 +20,16 @@ const ScheduledPane = (props) =>{
         startDate.setDate(startDate.getDate()-1);
       }
       if([...dateArray] != [...date]){
-        console.log("setting date again")
         setDate(dateArray);
       }
       
       async function fetchResults() {  
         try {
           const asyncResponse = await getWeekReport(props.orgName, props.repoName);
-          console.log(asyncResponse)
           if([...asyncResponse] != [...results]){
-            console.log("setting results again")
             setResults(asyncResponse);
           }
-          
-          
+                  
         } catch (err) {
           console.error(err);
         }
