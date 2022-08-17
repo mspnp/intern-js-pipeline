@@ -17,8 +17,7 @@ export const getRepos = async(org) => {
     const arrayNames = arrayRepos.map(element =>{
         return element.name
     })
-
-    console.log(arrayNames)
+    
     arrayNames.sort();
     return arrayNames;
  };
