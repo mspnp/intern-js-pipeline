@@ -1,5 +1,6 @@
 import React from "react";
 import classes from './OnDemandPane.module.css';
+import config from "../../docusaurus.config";
 
 const OnDemandPane = (props) =>{
 
@@ -9,7 +10,7 @@ const OnDemandPane = (props) =>{
     const githubActionsLink ="https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-onDemand.yml";
     
 
-    const reportLink = "https://"+ "miniature-fortnight-8ff422f4" +".pages.github.io/test-reports/" + props.orgName + "/" + props.repoName + "/onDemand"
+    const reportLink = config.url + config.baseUrl +"test-reports/" + props.orgName + "/" + props.repoName + "/onDemand"
     
 
       return (
