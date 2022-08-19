@@ -3,11 +3,11 @@ import OnDemandPane from "./OnDemandPane";
 import ScheduledPane from "./ScheduledPane";
 import classes from "./RepoCard.module.css";
 
+//individual white card, one for each repo
 const RepoCard = (props) =>{
   
   const githubLink ="https://github.com/"+props.orgName+"/"+props.repoName;
   
-
     return (
         <div className={classes.Card}>
           <a href={githubLink}>
