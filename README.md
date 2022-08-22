@@ -1,41 +1,16 @@
 # Nightly Builds 2022 Summer Intern Project
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Documentation and the code samples that are apart of them play an important role in a developer's experience. Code samples are the starting point for many developers and it's critical that they work in order for developers to gain a deeper understanding of the documentation as well as the technology itself.
 
-### Installation
-
-```
-$ yarn
-```
+This project aims to improve the quality of our code samples by running automated nightly integration tests on each repository referenced in documentation and then consolidating and presenting test results of all repositories on a dashboard. The goal was to take a proactive approach to ensuring all code samples work without wasting time manually testing each one.
 
 ### Local Development
 
-```
-$ yarn start
-```
+To spin up a local copy of the dashboard clone the repository and type the following commands:
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
+```cmd
+npm install
+npm start
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+For more detailed instructions on how to set up the test harness and dashboard please see [Nightly Integration Tests Dashboard Documentation](https://mspnp.github.io/intern-js-pipeline/docs/intro)
