@@ -5,7 +5,6 @@ import config from "../../docusaurus.config";
 //individual colored boxes representing each of nightly tests done throughout the week
 const TestResultBox = (props) =>{
     
-    const githubActionsLink =  "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright.yml";
     const reportLink =config.url + config.baseUrl +"test-reports/" + props.orgName + "/" + props.repoName + "/"+ props.date 
     
     //determines color of the box
