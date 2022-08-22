@@ -2,17 +2,13 @@ import React from "react";
 import classes from './OnDemandPane.module.css';
 import config from "../../docusaurus.config";
 
+//left side of white card that contains info about the latest test report
 const OnDemandPane = (props) =>{
 
     const badgeLink  = "https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-onDemand.yml/badge.svg";
-    
-  
     const githubActionsLink ="https://github.com/"+props.orgName+"/"+props.repoName+"/actions/workflows/playwright-onDemand.yml";
+    const reportLink = config.url + config.baseUrl +"test-reports/" + props.orgName + "/" + props.repoName + "/onDemand";
     
-
-    const reportLink = config.url + config.baseUrl +"test-reports/" + props.orgName + "/" + props.repoName + "/onDemand"
-    
-
       return (
           <div className={classes.Pane}>
             <a href={githubActionsLink}>

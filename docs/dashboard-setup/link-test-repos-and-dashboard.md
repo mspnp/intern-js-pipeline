@@ -8,7 +8,7 @@ Modify Playwright github actions in the test repositories to notify and update d
 
 1. Create a personal access token named `PAT_TOKEN` with `repo` and `workflow` permissions
   1. If the organization your dashboard is located in requires SSO enable SSO for the PAT token
-2. Append the following steps to the `playwright.yml` file below the current steps in the `test` job.
+2. Append the following steps to the `playwright-onDemand.yml` file below the current steps in the `test` job.
 
 ```yaml
     - name: Get current date
@@ -64,7 +64,7 @@ Modify Playwright github actions in the test repositories to notify and update d
               --raw-field event_type=rebuild-site
 ```
 
-    As a result the `playwright.yml` file should look similar to the following code with extra lines to install additional dependencies if required.
+    As a result the `playwright-onDemand.yml` file should look similar to the following code with extra lines to install additional dependencies if required.
 
 ```yaml
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node

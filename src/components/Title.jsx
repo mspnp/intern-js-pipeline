@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Title.module.css';
-
+//title and intro for dashboard
 const Title = () =>{
     return (
         <div>

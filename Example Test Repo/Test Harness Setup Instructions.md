@@ -1,5 +1,5 @@
 # Test Harness Setup Instructions
-See [example repo](https://github.com/HannahZhuSWE/gatsby-test-testharness/blob/main/.github/workflows/playwright.yml) for an example of the test harness and workflow setup. 
+See [example repo](https://github.com/HannahZhuSWE/gatsby-test-testharness/blob/main/.github/workflows/test-only.yml) for an example of the test harness and workflow setup. 
 1. At the root of your repository run `npm init playwright@latest` 
     1. Select a language (`TypeScript` was used for the example repo but either will work)
     2. Select a folder to place your tests in (the folder `tests` was used for the example repo)
