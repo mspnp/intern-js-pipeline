@@ -1,6 +1,6 @@
 {
   "label": "Dashboard Setup",
-  "position": 3,
+  "position": 2,
   "link": {
     "type": "generated-index",
     "description": "How to set up the dashboard on Github pages to display test results for all repos."

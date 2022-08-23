@@ -7,12 +7,13 @@ export const getRepos = async(org) => {
         headers: {
           }}
     );
-
+    console.log(results)
     const arrayRepos = await results.data.filter(async (element )=> {
         //original line: return partOfDashboard(org, element.name)
         //the line below is for debugging purposes
-        return await Promise.resolve(true)
+        return await Promise.resolve(false)
     });
+    console.log(arrayRepos)
 
     const arrayNames = arrayRepos.map(element =>{
         return element.name

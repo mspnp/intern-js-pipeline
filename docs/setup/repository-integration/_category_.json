@@ -1,0 +1,8 @@
+{
+  "label": "Repository Integration",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Set up a playwright test harness and github workflow for automated tests. For a working example repo see [staticwebdev/vue-basic](https://github.com/staticwebdev/vue-basic)"
+  }
+}

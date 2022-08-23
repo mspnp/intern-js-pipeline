@@ -6,7 +6,7 @@ This project aims to improve the quality of our code samples by running automate
 
 ### Local Development
 
-To spin up a local copy of the dashboard clone the repository and type the following commands:
+To spin up a local copy of the dashboard Node.js version 16.14 or higher is required. Clone the repository and type the following commands:
 
 ```cmd
 npm install

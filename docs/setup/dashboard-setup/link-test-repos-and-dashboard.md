@@ -7,7 +7,7 @@ sidebar_position: 3
 Modify Playwright github actions in the test repositories to notify and update dashboard to the latest test results:
 
 1. Create a personal access token named `PAT_TOKEN` with `repo` and `workflow` permissions
-  1. If the organization your dashboard is located in requires SSO enable SSO for the PAT token
+      1. If the organization your dashboard is located in requires SSO enable SSO for the PAT token
 2. Append the following steps to the `playwright-onDemand.yml` file below the current steps in the `test` job.
 
 ```yaml

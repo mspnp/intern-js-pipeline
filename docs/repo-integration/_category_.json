@@ -1,8 +1,0 @@
-{
-  "label": "Repository Integration",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Set up a playwright test harness and github workflow for automated tests."
-  }
-}
