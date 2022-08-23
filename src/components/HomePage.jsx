@@ -36,9 +36,8 @@ export function HomePage() {
   return (
     <div >
         <Title/>
-        <RepoCard repoName='gatsby-test-testharness' orgName= 'HannahZhuSWE'/>
         { repos.map(element => {
-            return <RepoCard repoName={element} orgName={config.organization}/>
+            return <RepoCard key={element} repoName={element} orgName={config.organization}/>
         })} 
       
     </div>

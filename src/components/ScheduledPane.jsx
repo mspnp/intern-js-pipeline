@@ -57,7 +57,7 @@ const ScheduledPane = (props) =>{
             <span>
                 {
                     results.map((result, index) =>{
-                        return <TestResultBox date={date[6-index]} pass={result} orgName={props.orgName} repoName={props.repoName}/>
+                        return <TestResultBox key={index} date={date[6-index]} pass={result} orgName={props.orgName} repoName={props.repoName}/>
                     })
                 }
                 

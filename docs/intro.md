@@ -22,7 +22,7 @@ The solution was to create a network of repositories each consisting of their ow
 
 ## Demo
 
-[![Demo preview](./img/demo-preview.png)](./media/demo.mp4)
+[![Demo preview](./img/demo-preview.png)](https://github.com/mspnp/intern-js-pipeline/blob/main/static/media/demo.mp4)
 
 ## Behind the Scenes
 

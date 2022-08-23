@@ -1,0 +1,9 @@
+{
+    "label": "Project Setup",
+    "position": 2,
+    "link": {
+      "type": "generated-index",
+      "description": "How to set up the project to work for another organization and it's repos"
+    }
+  }
+  
