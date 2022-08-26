@@ -10,9 +10,11 @@ This project aims to improve the quality of our code samples by running automate
 
 You can view the live dashboard here [Nightly Integration Tests Dashboard](https://mspnp.github.io/intern-js-pipeline/)
 
+Or you can watch the video [here](./static/media/demo.mp4)
+
 ![Dashboard](./docs/img/home-page.png)
 
-### Local Development
+### Host a Dashboard
 
 To spin up a local copy of the dashboard Node.js version 16.14 or higher is required. Clone the repository and type the following commands:
 
