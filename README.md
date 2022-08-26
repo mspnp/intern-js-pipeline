@@ -6,6 +6,12 @@ Documentation and the code samples that are apart of them play an important role
 
 This project aims to improve the quality of our code samples by running automated nightly integration tests on each repository referenced in documentation and then consolidating and presenting test results of all repositories on a dashboard. The goal was to take a proactive approach to ensuring all code samples work without wasting time manually testing each one.
 
+### Dashboard
+
+You can view the live dashboard here [Nightly Integration Tests Dashboard](https://mspnp.github.io/intern-js-pipeline/)
+
+![Dashboard](./docs/img/home-page.png)
+
 ### Local Development
 
 To spin up a local copy of the dashboard Node.js version 16.14 or higher is required. Clone the repository and type the following commands:
